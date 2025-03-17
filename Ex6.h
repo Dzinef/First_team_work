@@ -1,8 +1,15 @@
-#pragma once
+#pragma two
+#ifndef EX6_H
+#define EX6_H
+
+#include<iostream>
+
+bool isPrime(int32_t num);
+int32_t sumPrimes(int32_t, int32_t);
 
 
 template <typename T>
-bool isPrime(T num)
+bool isPrime(int32_t num)
 {
     if (num <= 1) return false;
 
@@ -19,11 +26,12 @@ bool isPrime(T num)
     
 
 template <typename T>
-void sumPrimes(int32_t* arr[], int32_t size)
+int32_t sumPrimes(int32_t arr[], int32_t size)
 {
     int32_t sum{ 0 };
+    int32_t num{ 0 };
 
-    for (size32_t i = 0; i < size; ++i)
+    for (int32_t i{0}; i < size; ++i)
     {
         num = arr[i];
 
@@ -39,5 +47,7 @@ void sumPrimes(int32_t* arr[], int32_t size)
 
     }
 
-    std::cout << "Summ of primes in array: " << sum << "\n";
+    return sum;
 }
+
+#endif
