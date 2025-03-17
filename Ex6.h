@@ -50,4 +50,4 @@ int32_t sumPrimes(int32_t arr[], int32_t size)
     return sum;
 }
 
-#endif
+#endef
